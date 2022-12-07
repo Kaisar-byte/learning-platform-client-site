@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -36,3 +37,16 @@ const Header = () => {
 };
 
 export default Header;
+=======
+import React from 'react';
+
+const Header = () => {
+    return (
+        <div>
+            <h2>This is header components</h2>
+        </div>
+    );
+};
+
+export default Header;
+>>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598

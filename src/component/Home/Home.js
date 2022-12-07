@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 import hero1 from "../../assets/images/hero1.png";
@@ -68,3 +69,20 @@ const Home = () => {
 };
 
 export default Home;
+=======
+import React from 'react';
+import heroImg from '../../assets/images/hero-img.png'
+
+const Home = () => {
+    return (
+        <div>
+            <div>
+                <h2>Start Your Programming Training</h2>
+            </div>
+            <img src={heroImg} alt="" />
+        </div>
+    );
+};
+
+export default Home;
+>>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598
