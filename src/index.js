@@ -3,8 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { IconName } from "react-icons/fa";
-import "flowbite";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

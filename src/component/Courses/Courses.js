@@ -23,7 +23,7 @@ const Courses = () => {
 					</Link>
 				))}
 			</div>
-			<div className="w-4/5 bg-purple-200 grid grid-cols-3 gap-2">
+			<div className="w-4/5 bg-purple-200 grid grid-cols-2 justify-center content-center px-8 py-8 gap-6">
 				{courses.map((course) => (
 					<Link to={`/courses/${course.id}`}>
 						<Course course={course}></Course>

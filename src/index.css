@@ -1,10 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
-
->>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,12 +11,6 @@ body {
 }
 
 code {
-<<<<<<< HEAD
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
-=======
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
->>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598

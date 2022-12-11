@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
-import Course from "../../Course/Course";
+import PrivateRoute from "../../../PrivateRoute/PrivateRoute";
+// import Course from "../../Course/Course";
 import Courses from "../../Courses/Courses";
+import Footer from "../../Footer/Footer";
 import Home from "../../Home/Home";
 import Main from "../../layout/Main";
 import Login from "../../Login/Login";
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/courses/:id",
-				element: <SingleCourse></SingleCourse>,
+				element: (
+					<PrivateRoute>
+						<SingleCourse></SingleCourse>
+					</PrivateRoute>
+				),
 				loader: ({ params }) =>
 					fetch(`http://localhost:5000/courses/${params.id}`),
 			},
@@ -47,27 +52,12 @@ const router = createBrowserRouter([
 				loader: ({ params }) =>
 					fetch(`http://localhost:5000/courses/${params.id}`),
 			},
+			{
+				path: "/footer",
+				element: <Footer></Footer>,
+			},
 		],
 	},
 ]);
 
 export default router;
-=======
-import Home from "../../Home/Home";
-import Main from "../../layout/Main";
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        children: [
-            {
-                path: '/',
-                element: <Home></Home>
-            }
-        ]
-    }
-])
-
-export default router
->>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598

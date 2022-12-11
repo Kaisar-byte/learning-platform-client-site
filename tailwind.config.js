@@ -1,21 +1,19 @@
-<<<<<<< HEAD
 // /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.{html,js}", "./node_modules/flowbite/**/*.js"],
+	content: ["./src/**/*.{html,js}"],
 	theme: {
 		extend: {},
 	},
-	plugins: [require("flowbite/plugin")],
+	plugins: [require("daisyui")],
+	// daisyUI config (optional)
+	daisyui: {
+		styled: true,
+		themes: true,
+		base: true,
+		utils: true,
+		logs: true,
+		rtl: false,
+		prefix: "",
+		darkTheme: "dark",
+	},
 };
-=======
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
->>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598

@@ -1,12 +1,19 @@
-<<<<<<< HEAD
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
-	const { user } = useContext(AuthContext);
-	console.log(user);
+	const { user, LogOut } = useContext(AuthContext);
+
+	const handleLogOut = () => {
+		LogOut()
+			.then(() => {})
+			.catch((error) => {
+				console.error(error);
+			});
+	};
 	return (
 		<div className="w-11/12 mx-auto">
 			<div className="flex justify-between py-3">
@@ -19,17 +26,44 @@ const Header = () => {
 					</Link>
 				</nav>
 
-				<div className="flex gap-3">
+				<div className="flex gap-3 justify-center items-center">
 					<nav className="flex gap-x-10">
 						<Link to="/courses">Courses</Link>
 						<Link>FAQ</Link>
 						<Link>Blog</Link>
 						<Link>About Us</Link>
-						<Link to="/login">Login</Link>
-						<Link to="/register">Register</Link>
 					</nav>
 
-					<nav className="text-red-400">{user?.displayName}</nav>
+					<nav className="flex gap-3 justify-center items-center">
+						{user?.uid ? (
+							<>
+								<span>{user?.displayName}</span>
+								<button
+									className="btn btn-outline btn-accent"
+									onClick={handleLogOut}
+								>
+									Log out
+								</button>
+							</>
+						) : (
+							<>
+								<Link to="/login">Log in</Link>
+								<Link to="/register">Register</Link>
+							</>
+						)}
+					</nav>
+					<nav>
+						{user?.photoURL ? (
+							<img
+								className="rounded-full w-10 justify-center items-center"
+								src={user?.photoURL}
+								alt=""
+								style={{ height: "40px" }}
+							/>
+						) : (
+							<FaUserAlt></FaUserAlt>
+						)}
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -37,16 +71,3 @@ const Header = () => {
 };
 
 export default Header;
-=======
-import React from 'react';
-
-const Header = () => {
-    return (
-        <div>
-            <h2>This is header components</h2>
-        </div>
-    );
-};
-
-export default Header;
->>>>>>> 7bdb76546368d35ce897c98fe6786183e3739598

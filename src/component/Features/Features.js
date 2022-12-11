@@ -1,22 +1,94 @@
 import React from "react";
-import { FaCode } from "react-icons/fa";
+import { AiOutlineCheck } from "react-icons/ai";
 
 const Features = () => {
 	return (
-		<div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 features flex justify-items-center gap-4 py-3 p-6 border-2 border-blue-200 m-3 rounded-md">
-			<div className="feature-icon">
-				<div className="bg-red-400 p-8 rounded-full">
-					<FaCode className="text-white text-xl"></FaCode>
-				</div>
-			</div>
-			<div className="feature-content text-left ">
-				<h2 className="mb-2 pl-3 text-2xl underline text-yellow-200">
-					Learn Coding
+		<div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+			<div className="text-left">
+				<h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl text-gray-50">
+					Learn, Code and Build
 				</h2>
-				<p className="ml-3">
-					You must learn to be still in the midst of activity and to be
-					vibrantly alive in repose.
+				<p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">
+					To build up a career in this platform follow this three word
 				</p>
+			</div>
+			<div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center text-left">
+				<div>
+					<h3 className="text-2xl font-bold tracking-tight sm:text-3xl text-gray-50">
+						A whole map of programming zone
+					</h3>
+					<p className="mt-3 text-lg dark:text-gray-400">
+						Programming zone is offering you this under mentioned criteria to
+						achive your goal
+					</p>
+					<div className="mt-12 space-y-12">
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+									<AiOutlineCheck
+										size={"24px"}
+										className="font-bold"
+									></AiOutlineCheck>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-50">
+									Perfect Learning
+								</h4>
+								<p className="mt-2 dark:text-gray-400">
+									Offering you a perfect learning environment to build your
+									career without your desire
+								</p>
+							</div>
+						</div>
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+									<AiOutlineCheck
+										size={"24px"}
+										className="font-bold"
+									></AiOutlineCheck>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-50">
+									Solution Bank
+								</h4>
+								<p className="mt-2 dark:text-gray-400">
+									This is a special intensive care unit to work for those whos
+									are expecting better acheivement then your desire and to take
+									extra supporting tool to make his learning more perfect
+								</p>
+							</div>
+						</div>
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+									<AiOutlineCheck
+										size={"24px"}
+										className="font-bold"
+									></AiOutlineCheck>
+								</div>
+							</div>
+							<div className="ml-4">
+								<h4 className="text-lg font-medium leading-6 dark:text-gray-50">
+									Review Session
+								</h4>
+								<p className="mt-2 dark:text-gray-400">
+									This is unit is working for the learner to build a person for
+									any viva voce for giant and big company employee.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-hidden="true" className="mt-10 lg:mt-0">
+					<img
+						src="https://thumbs.dreamstime.com/b/facility-management-mind-map-flowchart-marker-business-concept-presentations-reports-facility-management-mind-map-198579094.jpg"
+						alt=""
+						className="mx-auto rounded-lg shadow-lg dark:bg-gray-500"
+					/>
+				</div>
 			</div>
 		</div>
 	);
