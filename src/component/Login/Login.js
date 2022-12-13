@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const Login = () => {
 	const { providerLogin, LogIn } = useContext(AuthContext);
@@ -45,6 +46,13 @@ const Login = () => {
 				}
 			})
 			.catch((error) => console.error(error));
+		Swal.fire({
+			position: "top-end",
+			icon: "success",
+			title: "Github login successfull",
+			showConfirmButton: false,
+			timer: 1500,
+		});
 	};
 
 	const handleSubmit = (event) => {
