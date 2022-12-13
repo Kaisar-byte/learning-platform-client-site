@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
 	const { providerLogin, LogIn } = useContext(AuthContext);
@@ -48,7 +49,11 @@ const Login = () => {
 				console.log(user);
 				form.reset();
 				setError("/");
-				navigate(from, { replace: true });
+				if (user.emailVerified) {
+					navigate(from, { replace: true });
+				} else {
+					toast.error("Please verify your mail first");
+				}
 			})
 			.catch((error) => {
 				console.error(error);

@@ -3,10 +3,13 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-	const { createUser } = useContext(AuthContext);
+	const { createUser, updateUserProfiles, verifyEmail } =
+		useContext(AuthContext);
 	const [error, setError] = useState("");
+	const [accepted, setAccepted] = useState(false);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -23,12 +26,36 @@ const Register = () => {
 				console.log(user);
 				setError("");
 				form.reset();
+				handleUpdateUsersProfile(name, photoURL);
+				handleEmailVerification();
+				toast.success("Please verify your mail first");
 			})
 			.catch((error) => {
 				console.error(error);
 				setError(error.message);
 			});
 	};
+
+	const handleAccepted = (event) => {
+		setAccepted(event.target.checked);
+	};
+
+	const handleEmailVerification = () => {
+		verifyEmail()
+			.then(() => {})
+			.catch((error) => console.log(error));
+	};
+	const handleUpdateUsersProfile = (name, photoURL) => {
+		const profile = {
+			displayName: name,
+			photoURL: photoURL,
+		};
+
+		updateUserProfiles(profile)
+			.then(() => {})
+			.catch((error) => console.error(error));
+	};
+
 	return (
 		<div className="m-8">
 			<form onSubmit={handleSubmit} className="flex flex-col gap-3 ">
@@ -62,6 +89,7 @@ const Register = () => {
 						name="password"
 						required
 					/>
+
 					<button
 						type="submit"
 						className="text-white text-lg bg-sky-700 py-2 rounded-sm"
