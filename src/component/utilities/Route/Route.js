@@ -9,6 +9,7 @@ import Main from "../../layout/Main";
 import Login from "../../Login/Login";
 import Blogs from "../../pages/Blogs/Blogs";
 import CheckOut from "../../pages/CheckOut/CheckOut";
+import ContactUs from "../../pages/ContactUs/ContactUs";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
 import FAQ from "../../pages/FAQ/FAQ";
 import Register from "../../Register/Register";
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
 			{
 				path: "/faq",
 				element: <FAQ></FAQ>,
+			},
+			{
+				path: "/contact",
+				element: <ContactUs></ContactUs>,
 			},
 			{
 				path: "/footer",

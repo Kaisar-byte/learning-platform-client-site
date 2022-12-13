@@ -56,7 +56,6 @@ const Login = () => {
 		LogIn(email, password)
 			.then((result) => {
 				const user = result.user;
-
 				form.reset();
 				setError("/");
 				if (user.emailVerified) {

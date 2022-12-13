@@ -35,7 +35,7 @@ const Header = () => {
 						<Link to="/courses">Courses</Link>
 						<Link to="/faq">FAQ</Link>
 						<Link to="/blogs">Blog</Link>
-						<Link>About Us</Link>
+						<Link to="/contact">About Us</Link>
 					</nav>
 
 					<nav className="flex gap-3 justify-center items-center">
