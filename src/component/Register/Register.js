@@ -57,7 +57,7 @@ const Register = () => {
 	};
 
 	return (
-		<div className="m-8">
+		<div className="m-8 sm:w-full sm:mx-auto">
 			<form onSubmit={handleSubmit} className="flex flex-col gap-3 ">
 				<div className="flex flex-col gap-4 w-50 mx-auto rounded-md p-4 py-10 bg-indigo-400">
 					<div className="mb-4">

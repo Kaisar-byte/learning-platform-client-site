@@ -20,7 +20,7 @@ const Header = () => {
 	};
 	return (
 		<div className="w-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">
-			<div className="flex justify-between py-3 w-4/5 mx-auto">
+			<div className="flex justify-between sm:w-full py-3 w-4/5 mx-auto">
 				<nav className="text-2xl">
 					<Link to="/">
 						<span className="font-mono border-2 rounded px-2 text-gray-500 bg-gradient-to-r from-yellow-200 via-pink-300 to-red-500 ">
