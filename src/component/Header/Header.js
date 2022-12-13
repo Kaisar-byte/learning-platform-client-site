@@ -33,7 +33,7 @@ const Header = () => {
 				<div className="flex gap-3 justify-center items-center">
 					<nav className="flex gap-x-10">
 						<Link to="/courses">Courses</Link>
-						<Link>FAQ</Link>
+						<Link to="/faq">FAQ</Link>
 						<Link to="/blogs">Blog</Link>
 						<Link>About Us</Link>
 					</nav>

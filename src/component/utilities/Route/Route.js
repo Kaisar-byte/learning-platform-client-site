@@ -10,6 +10,7 @@ import Login from "../../Login/Login";
 import Blogs from "../../pages/Blogs/Blogs";
 import CheckOut from "../../pages/CheckOut/CheckOut";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
+import FAQ from "../../pages/FAQ/FAQ";
 import Register from "../../Register/Register";
 import Sidebar from "../../Sidebar/Sidebar";
 import SingleCourse from "../../SingleCourse/SingleCourse";
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
 				),
 				loader: ({ params }) =>
 					fetch(`http://localhost:5000/courses/${params.id}`),
+			},
+			{
+				path: "/faq",
+				element: <FAQ></FAQ>,
 			},
 			{
 				path: "/footer",

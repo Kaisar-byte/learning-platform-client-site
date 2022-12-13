@@ -21,6 +21,11 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
+				if (user.emailVerified) {
+					navigate(from, { replace: true });
+				} else {
+					toast.error("Please verify your mail first");
+				}
 			})
 			.catch((error) => {
 				console.error(error);
@@ -32,7 +37,12 @@ const Login = () => {
 		providerLogin(githubProvider)
 			.then((result) => {
 				const user = result.user;
-				console.log(user);
+
+				if (user.emailVerified) {
+					navigate(from, { replace: true });
+				} else {
+					toast.error("Please verify your mail first");
+				}
 			})
 			.catch((error) => console.error(error));
 	};
@@ -46,7 +56,7 @@ const Login = () => {
 		LogIn(email, password)
 			.then((result) => {
 				const user = result.user;
-				console.log(user);
+
 				form.reset();
 				setError("/");
 				if (user.emailVerified) {
