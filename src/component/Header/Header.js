@@ -67,7 +67,6 @@ const Header = () => {
 									alt=""
 									style={{ height: "40px" }}
 								/>
-
 								<ReactTooltip
 									anchorId="profile-tooltip"
 									place="bottom"
